@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content=
+"width=device-width, initial-scale=1">
+    <title>Asg 4a</title>
+    <link rel="stylesheet" href=
+"https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
+    <script src=
+"https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+    <script src=
+"https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js">
+    </script>
+</head>
+  
+<body>
+    <center>
+        <div data-role="page">
+            <h1 style="color:#6060a3;">
+                D Y PATIL COLLEGE ENGINEERING , AKURDI
+            </h1>
+            <h3>Information Table</h3>
+            <div data-role="header" id="GFG">
+                <div role="main" class="ui-content">
+                    <table data-role="table">
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Department</th>
+                                <th>Domain</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>D Y Patil College Of Engineering.</td>
+                                <td>Information Technology</td>
+                                <td><a href="https://www.dypcoeakurdi.ac.in"
+                                        data-rel="external">
+                                        https://www.dypcoeakurdi.ac.in
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <input type="button" id="Button" 
+                   value="THANK YOU">
+            <div id="log"></div>
+        </div>
+    </center>
+    
+    <script>
+        $(document).ready(function () {
+            $("#myTable").table({
+                classes: {
+                    "classes.Name": "CustomClass"
+                }
+            });
+            $("#myTable").table("option", "classes.Name", "CustomClass");
+            $("#Button").on('click', function () {
+                var a = $("#myTable").table("option", "classes.Name");
+                $("#log").html(a);
+            });
+        });
+    </script>
+    
+</body>
+  
+</html>
